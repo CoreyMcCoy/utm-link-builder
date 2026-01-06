@@ -1,52 +1,28 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { EllipsisVertical } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { Link as LinkIcon } from "lucide-react";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
-    <nav className="max-w-7xl mx-auto p-6">
-      <div className="flex items-center justify-between">
-        <Link to="/" className="btn btn-ghost normal-case text-xl">
-          <div>
-            <h3 className="text-lg font-bold">Cool Project Name</h3>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#FFFDF7]/80 backdrop-blur-sm border-b border-slate-100">
+      <nav className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+        <Link
+          to="/"
+          className="flex items-center gap-2 text-slate-800 hover:text-slate-600 transition-colors"
+        >
+          <div className="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center">
+            <LinkIcon size={18} className="text-white" />
           </div>
+          <span className="font-semibold text-lg tracking-tight">
+            UTM Link Builder
+          </span>
         </Link>
-        <div className="relative">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="btn btn-ghost cursor-pointer"
-          >
-            <EllipsisVertical className="w-6 h-6" />
-          </button>
-          {isOpen && (
-            <div className="absolute top-full right-0 mt-1 bg-white border border-gray-200 shadow-md rounded-md z-10 min-w-max">
-              <Link
-                to="#"
-                className="block px-4 py-2 text-sm hover:bg-gray-50"
-                onClick={() => setIsOpen(false)}
-              >
-                Link
-              </Link>
-              <Link
-                to="#"
-                className="block px-4 py-2 text-sm hover:bg-gray-50"
-                onClick={() => setIsOpen(false)}
-              >
-                Another link
-              </Link>
-              <Link
-                to="#"
-                className="block px-4 py-2 text-sm hover:bg-gray-50"
-                onClick={() => setIsOpen(false)}
-              >
-                And another link
-              </Link>
-            </div>
-          )}
-        </div>
-      </div>
-    </nav>
+        <Link
+          to="/about"
+          className="text-sm font-medium text-slate-500 hover:text-slate-800 transition-colors"
+        >
+          About
+        </Link>
+      </nav>
+    </header>
   );
 }
