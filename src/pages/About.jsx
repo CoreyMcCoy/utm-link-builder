@@ -4,7 +4,7 @@ import { ArrowLeft, Target, BarChart3, Lightbulb } from "lucide-react";
 export default function About() {
   return (
     <div className="min-h-screen bg-[#FFFDF7] pt-20 pb-32 px-6">
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         {/* Back Link */}
         <Link
           to="/"
@@ -19,8 +19,8 @@ export default function About() {
           About UTM Link Builder
         </h1>
         <p className="text-lg text-slate-500 mb-12">
-          A simple, free tool to help you track where your website visitors come
-          from.
+          A free tool that helps you figure out which of your posts, emails, and
+          ads are actually bringing people to where you want them to go.
         </p>
 
         {/* Sections */}
@@ -31,22 +31,24 @@ export default function About() {
               <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
                 <Target size={20} />
               </div>
-              <h2 className="text-2xl font-bold text-slate-800">
+              <h2 className="text-2xl font-medium text-slate-800">
                 What is this?
               </h2>
             </div>
             <div className="text-slate-600 leading-relaxed space-y-4 pl-13">
               <p>
-                UTM Link Builder creates <strong>trackable links</strong> for
-                your marketing campaigns. When someone clicks a link you create
-                here, analytics tools like Google Analytics can tell you exactly
-                where that visitor came from.
+                When you share a link - to your Google Business Profile, landing
+                page, online store, booking page, portfolio, whatever, you
+                probably wonder "is anyone actually clicking it?"
               </p>
               <p>
-                Instead of seeing "direct traffic" or vague referrers, you'll
-                see clear labels like "Facebook / social / summer-promo" —
-                making it easy to know what's actually working.
+                UTM Link Builder adds invisible <strong>trackable tags</strong>{" "}
+                to your links. When someone clicks, tools like Google Analytics
+                can tell you exactly where they came from. Not just "someone
+                clicked from social media," but "12 people clicked the link in
+                your Instagram bio on Tuesday."
               </p>
+              <p>It turns mystery clicks into clear answers.</p>
             </div>
           </section>
 
@@ -56,21 +58,35 @@ export default function About() {
               <div className="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center text-amber-600">
                 <Lightbulb size={20} />
               </div>
-              <h2 className="text-2xl font-bold text-slate-800">Why use it?</h2>
+              <h2 className="text-2xl font-medium text-slate-800">
+                Why you need this?
+              </h2>
             </div>
             <div className="text-slate-600 leading-relaxed space-y-4 pl-13">
               <p>
-                If you're sharing links on social media, in emails, or anywhere
-                else — you're probably losing valuable data. Without UTM
-                parameters, you're <strong>guessing</strong> what's driving your
-                traffic.
+                Right now, you're probably sharing links everywhere and hoping
+                something sticks. But without tracking, you can't tell what's
+                actually working.
               </p>
               <ul className="list-disc list-inside space-y-2 text-slate-600">
-                <li>Know which social posts actually bring visitors</li>
-                <li>Compare email campaigns to see what resonates</li>
-                <li>Track which ads (paid or organic) perform best</li>
-                <li>Make smarter decisions with real data</li>
+                <li>
+                  You share a link on three different platforms - which one got
+                  clicks?
+                </li>
+                <li>
+                  You send two versions of an email - which subject line worked
+                  better?
+                </li>
+                <li>
+                  You're running ads or promotions - are people actually
+                  clicking through?
+                </li>
               </ul>
+              <p>
+                Without UTM tags, you're guessing. With them, you see exactly
+                what's driving traffic so you can do more of what works (and
+                stop wasting time on what doesn't).
+              </p>
             </div>
           </section>
 
@@ -80,28 +96,34 @@ export default function About() {
               <div className="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600">
                 <BarChart3 size={20} />
               </div>
-              <h2 className="text-2xl font-bold text-slate-800">
+              <h2 className="text-2xl font-medium text-slate-800">
                 How does it work?
               </h2>
             </div>
             <div className="text-slate-600 leading-relaxed space-y-4 pl-13">
               <p>
-                UTM parameters are extra bits of text added to the end of any
-                URL. They don't change where the link goes — they just add
-                tracking info that analytics tools can read.
+                UTM tags are just extra text added to the end of any URL. They
+                look like this:
               </p>
               <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 font-mono text-sm break-all">
-                <span className="text-slate-800">example.com</span>
+                <span className="text-slate-800">your-link.com</span>
                 <span className="text-slate-400">?utm_source=</span>
-                <span className="text-emerald-600">facebook</span>
+                <span className="text-emerald-600">instagram</span>
                 <span className="text-slate-400">&utm_medium=</span>
                 <span className="text-blue-600">social</span>
                 <span className="text-slate-400">&utm_campaign=</span>
-                <span className="text-purple-600">summer-sale</span>
+                <span className="text-purple-600">spring-sale</span>
               </div>
               <p>
-                This tool walks you through creating these links step-by-step,
-                so you don't have to remember the syntax or worry about typos.
+                The link still goes to the same place - your Google Business
+                Profile, booking page, whatever. But now your analytics can read
+                those tags and show you: "5 clicks from Instagram, spring sale
+                campaign."
+              </p>
+              <p>
+                This free tool builds those links for you. Just answer a few
+                questions (Where are you sharing this? What's the campaign?) and
+                it creates a ready-to-use link.
               </p>
             </div>
           </section>

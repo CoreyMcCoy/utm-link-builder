@@ -39,7 +39,7 @@ const Button = ({
   ...props
 }) => {
   const baseStyles =
-    "inline-flex items-center justify-center rounded-full font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-white";
+    "inline-flex items-center justify-center rounded-full font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-white cursor-pointer";
   const variants = {
     primary:
       "bg-slate-900 text-white hover:bg-slate-800 shadow-lg shadow-slate-200 hover:scale-105",
@@ -273,7 +273,7 @@ export default function Home() {
         </div>
       )}
 
-      <div className="w-full max-w-2xl">
+      <div className="w-full max-w-3xl">
         <AnimatePresence mode="wait" custom={direction}>
           <Motion.div
             key={step}
